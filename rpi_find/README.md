@@ -19,19 +19,19 @@ Buid this program for RPI target
 
 Add to file /etc/rc.local as follow
 
-#Print the IP address
+	#Print the IP address
 
-_IP=$(hostname -I) || true
+	_IP=$(hostname -I) || true
 
-if [ "$_IP" ]; then
+	if [ "$_IP" ]; then
 
-  printf "My IP address is %s\n" "$_IP"
+  		printf "My IP address is %s\n" "$_IP"
 
-fi
+	fi
 
-sudo /home/pi/pi_server &
+	sudo /home/pi/pi_server &
 
-exit 0
+	exit 0
 
 #where /home/pi/pi_server is path to listen program 
 
