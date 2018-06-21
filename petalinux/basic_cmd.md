@@ -1,7 +1,7 @@
 # Source petalinux settings: 
 source /<path_to_petalinux>/settings.sh
 
-#Create project with existing petalinux BSP:
+# Create project with existing petalinux BSP:
 petalinux-create --type project --name zedboard --source Avnet-Digilent-Zedboard-v2015.2.1-final.bsp
 
 # Configuration project
@@ -45,12 +45,12 @@ create bootable image again
 	build/linux/rootfs/targetroot/lib/modules/3.19.0-xilinx/extra
   Send to target using ftp and install 
 
-#uboot tftpboot (BOOT.bin & image.ub in /tftpboot on host)
+# uboot tftpboot (BOOT.bin & image.ub in /tftpboot on host)
 input uboot command
 set serverip 192.168.1.y
 run netboot
 
-#Some resources:
+# Some resources:
 https://www.beyond-circuits.com/wordpress/tutorial/tutorial22/
 embedded-centric.com
 
