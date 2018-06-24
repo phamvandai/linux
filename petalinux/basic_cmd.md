@@ -52,6 +52,5 @@ https://www.xilinx.com/support/answers/55998.html
 Note: No space in Makefile (only TAB)
 
 # Some resources:
-https://www.beyond-circuits.com/wordpress/tutorial/tutorial22/
-embedded-centric.com
+https://www.beyond-circuits.com/wordpress/tutorial/tutorial22/embedded-centric.com
 
