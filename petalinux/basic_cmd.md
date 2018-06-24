@@ -6,8 +6,10 @@ petalinux-create --type project --name zedboard --source Avnet-Digilent-Zedboard
 
 # Configuration project
 petalinux-config
+
 # Configure kernel
 petalinux-config -c kernel
+
 # Configure rootfs
 petalinux-config -c rootfs
 
@@ -40,15 +42,14 @@ petalinux-build -x package
 petalinux-build again
 create bootable image again
 
-# MODULE
-  Build module separately petalinux-build -c my_module, find .ko file in 
-	build/linux/rootfs/targetroot/lib/modules/3.19.0-xilinx/extra
-  Send to target using ftp and install 
+# Modules
+Build module separately petalinux-build -c my_module, find .ko file in 
+build/linux/rootfs/targetroot/lib/modules/3.19.0-xilinx/extra
+Send to target using ftp and install 
 
-# uboot tftpboot (BOOT.bin & image.ub in /tftpboot on host)
-input uboot command
-set serverip 192.168.1.y
-run netboot
+# Startup script 
+https://www.xilinx.com/support/answers/55998.html
+Note: No space in Makefile (only TAB)
 
 # Some resources:
 https://www.beyond-circuits.com/wordpress/tutorial/tutorial22/
