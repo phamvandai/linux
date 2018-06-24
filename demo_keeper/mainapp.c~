@@ -122,7 +122,7 @@ void Servlet(SSL* ssl) /* Serve the connection -- threadable */
    
     int sd, bytes;
     const char* ServerResponse="<Body><Name>aticleworld.com</Name><year>1.5<year>\
-                                <BlogType>Embedded and c\\c++<BlogType><Author>amlendra<Author><Body>";
+                                <BlogType>Embedede and c\\c++<BlogType><Author>amlendra<Author><Body>";
  
     const char *cpValidMessage = "<Body><UserName>article<UserName><Password>123<Password><Body>"; 
  

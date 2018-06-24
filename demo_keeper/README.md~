@@ -12,7 +12,7 @@ Build: ./demo_server.sh build
 Clean: ./demo_server.sh clean
 Run:   ./demo_server.sh run
 
-# Client
+#Client
 Build: ./demo_client.sh build
 Clean: ./demo_client.sh clean
 Run:   ./demo_client.sh run
