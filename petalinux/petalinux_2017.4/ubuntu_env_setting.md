@@ -40,3 +40,7 @@ sudo vi /etc/default/isc-dhcp-server
 assign INTERFACES = "enp3s0" -> inteface name 
 
 sudo vi /etc/dhcp/dhcpd.conf
+
+# Colorized terminal
+  Open .bashrc and uncomment force_color_prompt=yes
+  Save and source bashrc
