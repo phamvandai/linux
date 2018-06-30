@@ -1,18 +1,18 @@
-## Install Vivado/SDK/Petalinux 2017.4 tools in Ubuntu 16.04
+# Install Vivado/SDK/Petalinux 2017.4 tools in Ubuntu 16.04
 
-# 1. Install Vivado/SDK
-# 2. Install dependencies
+## 1. Install Vivado/SDK
+## 2. Install dependencies
 	sudo dkpg --add-architecture i386
 	sudo apt-get install zlib1g:i386
 
 	sudo apt-get install python3 dos2unix iproute2 gawk xvfb git make net-tools libncurses5-dev 	tftpd lib32z1 libssl-dev flex bison libselinux1 gnupg wget diffstat chrpath socat xterm 	autoconf libtool tar unzip texinfo zlib1g-dev gcc-multilib build-essential libsdl1.2-dev 	libglib2.0-dev libsdl-dev build-essential gcc-multilib glib2.0 automake screen pax gzip 
 
-# 3. Setup environment
+## 3. Setup environment
 change dash to bash
 	sudo rm /bin/sh
 	sudo ln -s /bin/bash /bin/sh
 
-# 4. Run
+## 4. Run
 need to source petalinux settings
 	source <path_to_petalinux>/settings.sh
 	echo $PETALINUX
@@ -20,7 +20,7 @@ need to source petalinux settings
 Turn off webtalk statistics
 	petalinux-util --webtalk off
 
-# 5. Start
+## 5. Start
 - Get hdf from Vivado
 - Run petalinux
 - Create petalinux project: 
@@ -28,7 +28,7 @@ Turn off webtalk statistics
 - Goto hdf folder & import hdf: 
 	petalinux-config --get-hw-description -p <path_to_my_linux_prj>
 
-# 6. Commands for ZynqMP
+## 6. Commands for ZynqMP
 
 - build: 
 	petalinux-build
@@ -43,7 +43,7 @@ Turn off webtalk statistics
 - rebuild 
 	petalinux-build -x mrproper
 
-# 7. tftpboot
+## 7. tftpboot
 - install tftp on host
 - uboot command:
 	setenv ipaddr 192.168.1.100
@@ -51,7 +51,7 @@ Turn off webtalk statistics
 	tftpboot image.ub
 	bootm
 
-# 8. Enable hidden packages
+## 8. Enable hidden packages
 Enable in <project_dir>/project-spec/meta-user/recipes-core/images/petalinux-image.bbappend
 add 
 	IMAGE_INSTALL_append = " openssl"
@@ -67,7 +67,7 @@ for openssl <project_dir>/project-spec/configs/rootfs_config
 
 List of packages in <project_dir>/project-spec/configs/rootfs_config
 
-# 9. Build app against built-in lib in XSDK
+## 9. Build app against built-in lib in XSDK
 
 CONFIG LINKER 
 	set linker flags --sysroot=<plnx_project_dir>/build/tmp/sysroots/plnx_aarch64
