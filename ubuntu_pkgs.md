@@ -36,6 +36,30 @@ unrar
 ## psensor
 psensor
 
-# Colorized terminal
+## Colorized terminal
   Open .bashrc and uncomment force_color_prompt=yes
   Save and source bashrc
+
+## Install & configure tftp
+	sudo apt-get install xinetd tftpd tftp
+
+Create /etc/xinetd.d/tftp and put
+	service tftp
+	{
+	protocol        = udp
+	port            = 69
+	socket_type     = dgram
+	wait            = yes
+	user            = nobody
+	server          = /usr/sbin/in.tftpd
+	server_args     = /tftpboot
+	disable         = no
+	}
+
+Create /tftpboot
+	sudo mkdir /tftpboot
+	sudo chmod -R 777 /tftpboot
+	sudo chown -R nobody /tftpboot
+
+Restart service
+	sudo service xinetd restart
