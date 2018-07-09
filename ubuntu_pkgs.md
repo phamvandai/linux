@@ -44,6 +44,7 @@ psensor
 	sudo apt-get install xinetd tftpd tftp
 
 Create /etc/xinetd.d/tftp and put
+
 	service tftp
 	{
 	protocol        = udp
@@ -57,6 +58,7 @@ Create /etc/xinetd.d/tftp and put
 	}
 
 Create /tftpboot
+
 	sudo mkdir /tftpboot
 	sudo chmod -R 777 /tftpboot
 	sudo chown -R nobody /tftpboot
