@@ -33,6 +33,6 @@ Add to file /etc/rc.local as follow
 
 	exit 0
 
-#where /home/pi/pi_server is path to listen program 
+## where /home/pi/pi_server is path to listen program 
 
 
