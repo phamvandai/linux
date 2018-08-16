@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "kernel.h": "c",
+        "module.h": "c",
+        "delay.h": "c",
+        "kmod.h": "c",
+        "kthread.h": "c",
+        "signal.h": "c",
+        "semaphore.h": "c",
+        "uaccess.h": "c"
+    }
+}
